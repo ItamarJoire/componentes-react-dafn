@@ -1,0 +1,15 @@
+{
+  "name": "create-componentes-react-dafn",
+  "version": "1.0.0",
+  "description": "Scaffolding CLI para iniciar um novo projeto a partir do template componentes-react-dafn",
+  "type": "module",
+  "bin": {
+    "create-componentes-react-dafn": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
