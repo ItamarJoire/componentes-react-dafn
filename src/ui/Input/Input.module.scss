@@ -6,8 +6,8 @@
 }
 
 .input-label {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-bold);
   color: var(--surface-text);
 }
 
@@ -42,8 +42,8 @@
   padding: 11px 0;
   border: none;
   background: transparent;
-  font-family: var(--rawline);
-  font-size: 14px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-scale-base);
   color: var(--surface-text);
   outline: none;
 }
@@ -51,7 +51,7 @@
 .input-wrapper textarea {
   resize: none;
   height: 80px;
-  line-height: 145%;
+  line-height: var(--font-line-height-medium);
   overflow-y: auto;
 }
 
@@ -107,7 +107,7 @@
 }
 
 .input-helper {
-  font-size: 9px;
+  font-size: var(--font-size-scale-down-02);
   color: var(--text-muted);
 }
 
@@ -115,7 +115,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: var(--font-size-scale-down-01);
 }
 
 .input-wrapper-success {

@@ -1,8 +1,7 @@
 .home {
-  p {
-    line-height: 1.2;
-    font-size: 16px;
-  }
+  background: var(--blue-warm-vivid-90);
+  --surface-text: var(--white);
+  color: var(--white);
 }
 
 .hero {
@@ -12,25 +11,18 @@
   text-align: center;
   gap: 16px;
   padding: 120px 0;
+}
 
-  h1 {
-    margin: 0;
-    color: #fff;
-  }
-
-  p {
-    max-width: 480px;
-    margin-top: 12px;
-    line-height: 1.4;
-    color: var(--gray-40);
-  }
+.hero-text {
+  margin-top: -24px;
+  color: var(--gray-30);
 }
 
 .actions {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 .login-link {

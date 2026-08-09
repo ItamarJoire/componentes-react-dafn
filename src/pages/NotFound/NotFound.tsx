@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom'
-import { PageTitle } from '../../ui'
+import { Button, PageTitle } from '../../ui'
 import error01 from '../../assets/error01.png'
 import styles from './NotFound.module.scss'
 
@@ -10,9 +9,9 @@ export const NotFound = () => {
       <img src={error01} alt="" className={styles['illustration']} width={320} height={320} />
       <h1>Página não encontrada</h1>
       <p>A página que você está procurando não existe, foi removida ou está temporariamente indisponível.</p>
-      <Link to="/" className={styles['home-link']}>
+      <Button href="/" className={styles['home-link']}>
         Voltar para a página principal
-      </Link>
+      </Button>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 .iti-footer {
+  --surface-text: var(--white);
   color: var(--white);
   background: var(--footer-surface);
   position: relative;
@@ -55,7 +56,7 @@
   flex: 1;
   flex-wrap: wrap;
   gap: 32px;
-  line-height: 1.5;
+  line-height: var(--font-line-height-medium);
 }
 
 .iti-footer-column {
@@ -64,8 +65,8 @@
 
 .iti-footer-column-title {
   margin: 0 0 16px;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--white);
@@ -74,7 +75,7 @@
 .iti-footer-column a {
   display: block;
   padding: 6px 0;
-  font-size: 14px;
+  font-size: var(--font-size-scale-base);
   color: var(--white);
   text-decoration: none;
 }
@@ -102,7 +103,7 @@
   padding: 0;
   background: none;
   border: none;
-  font-size: 14px;
+  font-size: var(--font-size-scale-base);
   color: var(--white);
   cursor: pointer;
 }
@@ -116,8 +117,8 @@
 .iti-footer-social-title {
   margin: 0;
   color: var(--white);
-  font-size: 13px;
-  font-weight: 700;
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -144,8 +145,8 @@
   border-radius: 6px;
   background: var(--white);
   color: var(--blue-warm-vivid-90);
-  font-size: 13px;
-  font-weight: 700;
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-bold);
   text-decoration: none;
 }
 
@@ -156,8 +157,12 @@
   position: relative;
   padding: 20px 80px 20px 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 13px;
+  font-size: var(--font-size-scale-base);
   text-align: center;
+
+  p {
+    font-size: inherit;
+  }
 }
 
 .iti-footer-top-fab {

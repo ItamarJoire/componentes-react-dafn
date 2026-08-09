@@ -14,8 +14,8 @@
 }
 
 .table-title {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: var(--font-size-scale-up-01);
+  font-weight: var(--font-weight-bold);
   color: var(--surface-text);
   margin: 0;
 }
@@ -41,7 +41,7 @@
     border: 1px solid var(--border-strong);
     border-radius: 999px;
     padding: 6px 12px 6px 32px;
-    font-size: 14px;
+    font-size: var(--font-size-scale-base);
     color: var(--surface-text);
     background: var(--surface);
 
@@ -63,8 +63,8 @@
   border: none;
   border-radius: 999px;
   padding: 6px 16px;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-bold);
   white-space: nowrap;
   background: var(--blue-warm-vivid-70-main);
   color: var(--white);
@@ -106,7 +106,7 @@
   padding: 12px 20px;
   background: var(--blue-warm-vivid-70-main);
   color: var(--white);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .selection-actions {
@@ -121,7 +121,7 @@
     border: none;
     background: transparent;
     color: var(--white);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     cursor: pointer;
   }
 }
@@ -145,8 +145,8 @@
       z-index: 3;
       text-align: left;
       padding: 12px 16px;
-      font-size: 14px;
-      font-weight: 700;
+      font-size: var(--font-size-scale-base);
+      font-weight: var(--font-weight-bold);
       color: var(--blue-warm-vivid-70-main);
       white-space: nowrap;
       background: var(--surface-muted);
@@ -179,7 +179,7 @@
 
     td {
       padding: 12px 16px;
-      font-size: 14px;
+      font-size: var(--font-size-scale-base);
       color: inherit;
       white-space: nowrap;
     }
@@ -224,7 +224,7 @@
   gap: 16px;
   padding: 12px 20px;
   border-top: 1px solid var(--border);
-  font-size: 14px;
+  font-size: var(--font-size-scale-base);
   color: var(--text-muted);
 }
 

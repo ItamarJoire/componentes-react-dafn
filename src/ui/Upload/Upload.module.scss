@@ -6,8 +6,8 @@
 }
 
 .upload-label {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-bold);
   color: var(--surface-text);
 }
 
@@ -46,7 +46,7 @@
 
 .upload-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: var(--font-size-scale-base);
   color: var(--blue-warm-vivid-70-main);
 }
 
@@ -68,7 +68,7 @@
 }
 
 .upload-helper {
-  font-size: 14px;
+  font-size: var(--font-size-scale-base);
   color: var(--text-muted);
 }
 
@@ -88,7 +88,7 @@
     border: 1px solid var(--border);
     border-radius: 4px;
     color: var(--surface-text);
-    font-size: 14px;
+    font-size: var(--font-size-scale-base);
   }
 }
 

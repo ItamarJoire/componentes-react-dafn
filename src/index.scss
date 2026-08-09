@@ -70,7 +70,39 @@
   --red-vivid-10-alternative: #fde0db;
   --red-vivid-5: #fff3f2;
 
-  --rawline: 'Rawline', sans-serif;
+  --rawline: 'Rawline', 'Raleway', sans-serif;
+  --font-family-base: var(--rawline);
+
+  // Tipografia (escala tipográfica do Padrão Digital de Governo - gov.br Design System)
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  --font-line-height-low: 1.15;
+  --font-line-height-medium: 1.45;
+  --font-line-height-high: 1.85;
+
+  --font-size-scale-down-03: 0.8106rem;
+  --font-size-scale-down-02: 0.9716rem;
+  --font-size-scale-down-01: 1.1662rem;
+  --font-size-scale-base: 1.4rem;
+  --font-size-scale-up-01: 1.68rem;
+  --font-size-scale-up-02: 2.016rem;
+  --font-size-scale-up-03: 2.4192rem;
+  --font-size-scale-up-04: 2.9036rem;
+  --font-size-scale-up-05: 3.4832rem;
+  --font-size-scale-up-06: 4.1804rem;
+  --font-size-scale-up-07: 5.0162rem;
+  --font-size-scale-up-08: 6.02rem;
+  --font-size-scale-up-09: 7.224rem;
+  --font-size-scale-up-10: 8.6688rem;
+  --font-size-scale-up-11: 10.402rem;
 
   font: 18px/145% var(--rawline);
   letter-spacing: 0.18px;
@@ -111,35 +143,120 @@ body {
 }
 
 h1,
-h2 {
-  font-family: var(--rawline);
-  font-weight: 500;
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--surface-text);
+  font-family: var(--font-family-base);
+  line-height: var(--font-line-height-low);
+  margin: 0 0 1.6rem;
 }
 
 h1 {
-  font-size: 5.4rem;
+  font-size: var(--font-size-scale-up-04);
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.4px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 3.6rem;
-    margin: 20px 0;
+
+  @media (min-width: 576px) {
+    font-size: var(--font-size-scale-up-06);
+    font-weight: var(--font-weight-light);
   }
 }
 
 h2 {
-  font-size: 3rem;
-  line-height: 118%;
+  font-size: var(--font-size-scale-up-03);
+  font-weight: var(--font-weight-semi-bold);
   letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 2rem;
+
+  @media (min-width: 576px) {
+    font-size: var(--font-size-scale-up-05);
+    font-weight: var(--font-weight-regular);
+  }
+}
+
+h3 {
+  font-size: var(--font-size-scale-up-02);
+  font-weight: var(--font-weight-bold);
+
+  @media (min-width: 576px) {
+    font-size: var(--font-size-scale-up-04);
+    font-weight: var(--font-weight-medium);
+  }
+}
+
+h4 {
+  font-size: var(--font-size-scale-up-01);
+  font-weight: var(--font-weight-bold);
+
+  @media (min-width: 576px) {
+    font-size: var(--font-size-scale-up-03);
+    font-weight: var(--font-weight-semi-bold);
+  }
+}
+
+h5 {
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-extra-bold);
+  text-transform: uppercase;
+
+  @media (min-width: 576px) {
+    font-size: var(--font-size-scale-up-02);
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+h6 {
+  font-size: var(--font-size-scale-down-01);
+  font-weight: var(--font-weight-extra-bold);
+  text-transform: uppercase;
+
+  @media (min-width: 576px) {
+    font-size: var(--font-size-scale-up-01);
   }
 }
 
 p {
+  color: var(--surface-text);
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-medium);
   margin: 0;
-  line-height: 1.4;
+
+  @media (min-width: 576px) {
+    font-size: var(--font-size-scale-up-01);
+  }
+}
+
+a {
+  color: var(--blue-warm-vivid-70-main);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--blue-warm-vivid-70-main);
+    outline-offset: 2px;
+  }
+}
+
+p a {
+  text-decoration: underline;
+}
+
+span {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+small {
+  font-size: 80%;
 }
 
 .svg-inline--fa {

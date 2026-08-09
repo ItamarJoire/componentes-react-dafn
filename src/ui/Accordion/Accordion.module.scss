@@ -34,12 +34,12 @@
 }
 
 .accordion-title {
-  font-size: 16px;
+  font-size: var(--font-size-scale-up-01);
   color: var(--blue-warm-vivid-70-main);
 }
 
 .accordion-panel {
   padding: 0 0 16px 26px;
-  font-size: 14px;
+  font-size: var(--font-size-scale-base);
   color: var(--text-muted);
 }

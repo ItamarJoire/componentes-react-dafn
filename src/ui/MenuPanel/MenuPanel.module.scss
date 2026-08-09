@@ -31,7 +31,7 @@
   background: none;
   border: none;
   text-align: left;
-  font-size: 15px;
+  font-size: var(--font-size-scale-base);
   color: var(--blue-warm-vivid-70-main);
 }
 
@@ -65,7 +65,7 @@
   align-items: center;
   gap: 12px;
   padding: 12px 18px 12px 34px;
-  font-size: 14px;
+  font-size: var(--font-size-scale-base);
   color: var(--blue-warm-vivid-70-main);
   text-decoration: none;
   border-bottom: 1px solid var(--border);

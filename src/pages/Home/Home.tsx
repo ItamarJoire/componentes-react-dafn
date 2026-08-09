@@ -3,11 +3,14 @@ import styles from './Home.module.scss'
 
 export const Home = () => {
   return (
-    <div className={styles['home']} style={{ backgroundColor: 'var(--blue-warm-vivid-90)' }}>
+    <div className={styles['home']}>
       <PageTitle title="Página principal" />
       <div className={styles['hero']}>
         <h1>Componentes-dafn</h1>
-        <p>Base de componentes React + TypeScript + Vite, construída sobre os tokens do gov.br Design System.</p>
+        <p className={styles['hero-text']}>
+          Base de componentes React + TypeScript + Vite, construída <br />
+          sobre os tokens do gov.br Design System.
+        </p>
         <div className={styles['actions']}>
           <Button
             variant="tertiary"
