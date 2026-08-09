@@ -19,6 +19,8 @@
   color: var(--blue-warm-vivid-70-main);
   text-decoration: none;
   white-space: nowrap;
+  cursor: pointer;
+  transition: color var(--transition-fast);
 }
 
 .nav-link:hover {
@@ -46,6 +48,8 @@
   font-size: var(--font-size-scale-base);
   color: var(--blue-warm-vivid-70-main);
   text-decoration: none;
+  cursor: pointer;
+  transition: background var(--transition-fast);
 }
 
 .nav-dropdown li a:hover {

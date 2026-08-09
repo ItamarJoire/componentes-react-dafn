@@ -69,6 +69,7 @@
   background: var(--blue-warm-vivid-70-main);
   color: var(--white);
   cursor: pointer;
+  transition: background var(--transition-fast);
 
   &:hover {
     background: var(--blue-warm-vivid-80);
@@ -86,6 +87,7 @@
   background: transparent;
   color: var(--blue-warm-vivid-70-main);
   cursor: pointer;
+  transition: background var(--transition-fast);
 
   &:hover {
     background: var(--blue-warm-vivid-5);
@@ -194,6 +196,7 @@
   position: sticky;
   z-index: 1;
   box-shadow: 2px 0 4px -2px rgba(0, 0, 0, 0.15);
+  transition: background var(--transition-fast);
 }
 
 .checkbox-col {

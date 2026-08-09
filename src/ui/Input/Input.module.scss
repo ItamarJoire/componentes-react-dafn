@@ -25,7 +25,7 @@
   border: 1px solid var(--border-strong);
   border-radius: 8px;
   box-sizing: border-box;
-  transition: border-color 0.15s ease;
+  transition: border-color var(--transition-fast);
 }
 
 .input-wrapper:focus-within {
@@ -90,6 +90,7 @@
   padding: 4px;
   color: var(--blue-warm-vivid-70-main);
   cursor: pointer;
+  transition: color var(--transition-fast);
 }
 
 .input-action:disabled {

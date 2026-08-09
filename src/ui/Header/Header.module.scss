@@ -38,9 +38,10 @@
   border: none;
   background: transparent;
   color: var(--blue-warm-vivid-70-main);
+  cursor: pointer;
   transition:
-    background 0.15s ease,
-    color 0.15s ease;
+    background var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .icon-btn:hover {
@@ -125,6 +126,10 @@
   font-size: var(--font-size-scale-base);
   color: var(--gray-50);
   text-decoration: none;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .iti-header-kebab-menu li a:hover {
@@ -176,7 +181,8 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-  transition: background 0.15s ease;
+  cursor: pointer;
+  transition: background var(--transition-fast);
 }
 
 .iti-header-a11y-fab:hover {

@@ -104,6 +104,8 @@
   --font-size-scale-up-10: 8.6688rem;
   --font-size-scale-up-11: 10.402rem;
 
+  --transition-fast: 0.2s ease;
+
   font: 18px/145% var(--rawline);
   letter-spacing: 0.18px;
   color: var(--gray-80-main);
@@ -232,11 +234,11 @@ p {
 a {
   color: var(--blue-warm-vivid-70-main);
   text-decoration: none;
+  cursor: pointer;
 
-  &:hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
+  // &:hover {
+  //   text-decoration: underline;
+  // }
 
   &:focus-visible {
     outline: 2px solid var(--blue-warm-vivid-70-main);

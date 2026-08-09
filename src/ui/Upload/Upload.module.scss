@@ -22,8 +22,8 @@
   background: var(--blue-warm-vivid-5);
   cursor: pointer;
   transition:
-    background 0.15s ease,
-    border-color 0.15s ease;
+    background var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .upload-dropzone:hover,
@@ -107,6 +107,7 @@
   background: transparent;
   color: var(--text-muted);
   cursor: pointer;
+  transition: color var(--transition-fast);
 
   &:hover {
     color: var(--red-vivid-50-main);

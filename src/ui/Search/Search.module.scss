@@ -35,9 +35,10 @@
   border: none;
   background: transparent;
   color: var(--blue-warm-vivid-70-main);
+  cursor: pointer;
   transition:
-    background 0.15s ease,
-    color 0.15s ease;
+    background var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .search-icon-btn:hover {
