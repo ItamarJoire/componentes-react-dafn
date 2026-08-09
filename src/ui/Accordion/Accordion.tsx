@@ -8,6 +8,8 @@ export const Accordion: React.FC<AccordionProps> = ({
   items,
   allowMultiple = false,
   defaultOpenIds = [],
+  interactive = true,
+  columns = 1,
   className = ''
 }) => {
   const [openIds, setOpenIds] = useState<string[]>(defaultOpenIds)
@@ -19,27 +21,39 @@ export const Accordion: React.FC<AccordionProps> = ({
     })
   }
 
+  const staticModifier = !interactive ? ` ${styles['is-static']}` : ''
+  const gridModifier = columns > 1 ? ` ${styles['is-grid']}` : ''
+
   return (
-    <div className={`${styles['accordion']}${className ? ` ${className}` : ''}`}>
+    <div
+      className={`${styles['accordion']}${staticModifier}${gridModifier}${className ? ` ${className}` : ''}`}
+      style={columns > 1 ? { gridTemplateColumns: `repeat(${columns}, 1fr)` } : undefined}
+    >
       {items.map(item => {
-        const isOpen = openIds.includes(item.id)
+        const isOpen = !interactive || openIds.includes(item.id)
         const panelId = `accordion-panel-${item.id}`
 
         return (
-          <div key={item.id} className={styles['accordion-item']}>
-            <button
-              type="button"
-              className={styles['accordion-trigger']}
-              aria-expanded={isOpen}
-              aria-controls={panelId}
-              onClick={() => toggle(item.id)}
-            >
-              <FontAwesomeIcon
-                icon={faChevronDown}
-                className={`${styles['accordion-icon']}${isOpen ? ` ${styles['is-open']}` : ''}`}
-              />
-              <span className={styles['accordion-title']}>{item.title}</span>
-            </button>
+          <div key={item.id} className={`${styles['accordion-item']}${staticModifier}`}>
+            {interactive ? (
+              <button
+                type="button"
+                className={styles['accordion-trigger']}
+                aria-expanded={isOpen}
+                aria-controls={panelId}
+                onClick={() => toggle(item.id)}
+              >
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className={`${styles['accordion-icon']}${isOpen ? ` ${styles['is-open']}` : ''}`}
+                />
+                <span className={styles['accordion-title']}>{item.title}</span>
+              </button>
+            ) : (
+              <div className={styles['accordion-trigger']}>
+                <span className={styles['accordion-title']}>{item.title}</span>
+              </div>
+            )}
 
             {isOpen && (
               <div id={panelId} className={styles['accordion-panel']}>

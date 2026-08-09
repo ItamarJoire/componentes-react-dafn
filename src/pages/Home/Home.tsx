@@ -1,4 +1,5 @@
 import { PageTitle, Button } from '../../ui'
+import { paths } from '../../routes'
 import styles from './Home.module.scss'
 
 export const Home = () => {
@@ -20,6 +21,22 @@ export const Home = () => {
           >
             Ver documentação
           </Button>
+        </div>
+
+        <div className={styles['routes']}>
+          <p className={styles['routes-title']}>Rotas do projeto</p>
+          <ul className={styles['routes-list']}>
+            <li>
+              <a className={styles['login-link']} href={paths.login}>
+                Login ({paths.login})
+              </a>
+            </li>
+            <li>
+              <a className={styles['login-link']} href="/rota-inexistente">
+                Página não encontrada (404)
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

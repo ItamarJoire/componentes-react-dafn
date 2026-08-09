@@ -24,15 +24,15 @@ export const Nav: React.FC<NavProps> = ({ links, ariaLabel = 'Menu institucional
         {links.map(link =>
           link.dropdownItems ? (
             <li key={link.id} className={`${styles['nav-item']} ${styles['nav-item-dropdown']}`}>
-              <button
+              <a
                 type="button"
                 className={styles['nav-link']}
                 aria-expanded={openId === link.id}
                 onClick={() => setOpenId(current => (current === link.id ? null : link.id))}
               >
                 {link.label}
-                <FontAwesomeIcon icon={faChevronDown} style={{ width: 12, height: 12 }} />
-              </button>
+                <FontAwesomeIcon icon={faChevronDown} className={styles['nav-link-icon']} />
+              </a>
               {openId === link.id && (
                 <ul className={styles['nav-dropdown']}>
                   {link.dropdownItems.map(item => (

@@ -30,3 +30,21 @@
   color: var(--blue-warm-vivid-70-main);
   text-decoration: underline;
 }
+
+.routes {
+  margin-top: 24px;
+}
+
+.routes-title {
+  font-weight: 700;
+  color: var(--white);
+}
+
+.routes-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  padding: 0;
+}

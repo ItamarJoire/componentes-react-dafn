@@ -27,6 +27,13 @@
   color: var(--blue-warm-vivid-80);
 }
 
+.nav-link-icon {
+  width: 10px;
+  height: 10px;
+  margin-top: 2px;
+  opacity: 0.75;
+}
+
 .nav-dropdown {
   display: flex;
   flex-direction: column;

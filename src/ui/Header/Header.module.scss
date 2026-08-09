@@ -66,6 +66,23 @@
   line-height: 1;
 }
 
+.iti-header-nav {
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .iti-header-nav {
+    display: none;
+  }
+}
+
+.iti-header-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  order: 3;
+}
+
 .logo {
   font-size: var(--font-size-scale-up-04);
   font-weight: var(--font-weight-extra-bold);
@@ -98,6 +115,7 @@
   flex-shrink: 0;
   width: 1px;
   height: 24px;
+  margin-left: auto;
   background: var(--gray-5);
 }
 
@@ -149,6 +167,21 @@
 
 .iti-header-menu-toggle {
   flex-shrink: 0;
+}
+
+.iti-header-search {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  width: 100%;
+  max-width: 420px;
+}
+
+@media (max-width: 768px) {
+  .iti-header-search {
+    width: auto;
+    max-width: none;
+  }
 }
 
 .iti-header-title {

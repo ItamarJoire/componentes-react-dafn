@@ -17,6 +17,8 @@ export const Header: React.FC<HeaderProps> = ({
   entrarSuffix = ' com gov.br',
   entrarHref = '#',
   showMenuPanel = true,
+  showNav = true,
+  showSearch = true,
   isMenuOpen = false,
   onMenuToggleClick
 }) => {
@@ -49,10 +51,11 @@ export const Header: React.FC<HeaderProps> = ({
 
         <p className={styles['iti-header-ministry']}>{ministryName}</p>
 
-        {/* CASO NÃO QUEIRA A NAVEGAÇÃO, REMOVA O COMPONENTE ABAIXO */}
-        <HeaderNavContainer>
-          <Nav links={topNavLinks} />
-        </HeaderNavContainer>
+        {showNav && (
+          <HeaderNavContainer>
+            <Nav links={topNavLinks} />
+          </HeaderNavContainer>
+        )}
 
         <span className={styles['iti-header-divider']} aria-hidden="true" />
 
@@ -118,10 +121,11 @@ export const Header: React.FC<HeaderProps> = ({
           <p className={styles['iti-header-paragh']}>{systemName}</p>
         </div>
 
-        {/* CASO NÃO QUEIRA A BARRA DE BUSCA, REMOVA O COMPONENTE ABAIXO */}
-        <HeaderSearchContainer>
-          <Search placeholder="O que você procura?" onSearch={handleSearch} />
-        </HeaderSearchContainer>
+        {showSearch && (
+          <HeaderSearchContainer>
+            <Search placeholder="O que você procura?" onSearch={handleSearch} />
+          </HeaderSearchContainer>
+        )}
       </div>
     </header>
   )

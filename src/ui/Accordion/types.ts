@@ -12,5 +12,9 @@ export interface AccordionProps {
   allowMultiple?: boolean
   /** Ids dos itens abertos inicialmente. */
   defaultOpenIds?: string[]
+  /** Quando false, remove o botão/ícone de alternância e mantém todos os itens sempre abertos. @default true */
+  interactive?: boolean
+  /** Número de colunas do grid. Itens são distribuídos em linhas, alinhando o topo de cada linha independente do tamanho do conteúdo. @default 1 */
+  columns?: number
   className?: string
 }

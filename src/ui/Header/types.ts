@@ -15,11 +15,6 @@ export interface HeaderButtonProps {
   children: ReactNode
 }
 
-export interface HeaderActionsProps {
-  children: ReactNode
-  className?: string
-}
-
 export interface HeaderProps {
   ministryName?: string
   institutionName?: string
@@ -34,6 +29,8 @@ export interface HeaderProps {
   searchPlaceholder?: string
   onSearch?: (query: string) => void
   showMenuPanel?: boolean
+  showNav?: boolean
+  showSearch?: boolean
   isMenuOpen?: boolean
   onMenuToggleClick?: () => void
   showAccessibilityWidget?: boolean
