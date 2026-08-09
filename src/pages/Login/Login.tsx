@@ -7,7 +7,7 @@ export const Login = () => {
     <div className={styles['login']}>
       <PageTitle title="Login" />
 
-      <h1>Perguntas frequentes</h1>
+      <h3>Perguntas frequentes</h3>
 
       <Accordion items={loginFaqItems} interactive={false} columns={3} />
     </div>
