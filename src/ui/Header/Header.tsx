@@ -10,7 +10,7 @@ import styles from './Header.module.scss'
 export const Header: React.FC<HeaderProps> = ({
   ministryName = 'Ministério da Gestão e da Inovação em Serviços Públicos',
   institutionName = 'Instituto Nacional de Tecnologia da Informação',
-  systemName = 'Plano Anual de Auditoria Operacional (PLAAO)',
+  systemName = '<Nome Da Aplicação Web> (<ACRÔNIMO>)',
   logoHref = '/',
   topNavLinks = defaultTopNavLinks,
   entrarShortLabel = 'Entrar',

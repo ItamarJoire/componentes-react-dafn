@@ -34,21 +34,14 @@ export const defaultFooterColumns: FooterColumn[] = [
       { id: 'ouvidoria', label: 'Ouvidoria ITI', href: '#' }
     ]
   },
-  {
-    id: 'redes-sociais-canais',
-    title: 'Redes Sociais/Canais',
-    links: [
-      { id: 'facebook-link', label: 'Facebook', href: '#' },
-      { id: 'twitter-link', label: 'Twitter', href: '#' }
-    ]
-  },
+
   {
     id: 'endereco',
     title: 'Endereço',
     links: [
       {
         id: 'endereco-link',
-        label: 'Setor de Autarquias Sul – SAUS Quadra 06 BL E. Complexo Anatel CEP 70070-940 – Brasília/DF',
+        label: 'Setor de Autarquias Sul – SAUS Quadra 06 BL E. \n Complexo Anatel, CEP 70070-940 – Brasília/DF',
         href: '#'
       }
     ]
