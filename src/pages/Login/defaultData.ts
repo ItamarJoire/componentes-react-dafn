@@ -2,6 +2,11 @@ import type { AccordionItem } from '../../ui/Accordion/types'
 
 export const loginFaqItems: AccordionItem[] = [
   {
+    id: 'sistems',
+    title: 'O que é o sistema?',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  },
+  {
     id: 'como-entrar',
     title: 'Como faço login no sistema?',
     content:
