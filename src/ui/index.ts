@@ -1,4 +1,5 @@
 export { Accordion } from './Accordion'
+export { Badge } from './Badge'
 export { Button } from './Button'
 export { Input } from './Input'
 export { MenuPanel, defaultMenuSections } from './MenuPanel'
