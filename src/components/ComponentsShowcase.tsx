@@ -16,6 +16,7 @@ import { NavExample } from './NavExample'
 import { RadioExample } from './RadioExample'
 import { SearchExample } from './SearchExample'
 import { StepExample } from './StepExample'
+import { SwitchExample } from './SwitchExample'
 import { UploadExample } from './UploadExample'
 import { UsersTableExample } from './UserTableExample'
 import styles from './ComponentsShowcase.module.scss'
@@ -39,6 +40,7 @@ const tabs = [
   { id: 'radio', label: 'Radio', Component: RadioExample },
   { id: 'search', label: 'Search', Component: SearchExample },
   { id: 'step', label: 'Step', Component: StepExample },
+  { id: 'switch', label: 'Switch', Component: SwitchExample },
   { id: 'upload', label: 'Upload', Component: UploadExample }
 ]
 
