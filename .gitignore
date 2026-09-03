@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Documentação DAFN (gerada em predev/prebuild a partir de src/ui/*/types.ts)
+src/pages/DocReactDafn/manifest.generated.ts
+
 # Env
 .env
 .env.*

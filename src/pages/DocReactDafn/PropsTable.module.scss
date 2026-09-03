@@ -1,0 +1,35 @@
+.wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-scale-down-02);
+}
+
+.table th,
+.table td {
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  color: var(--surface-text);
+}
+
+.table th {
+  background: var(--surface-muted);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table code {
+  font-family: monospace;
+  font-size: 0.95em;
+}

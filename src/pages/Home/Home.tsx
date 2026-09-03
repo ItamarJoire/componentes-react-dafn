@@ -17,6 +17,11 @@ export const Home = () => {
             </a>
           </li>
           <li>
+            <a className={styles['login-link']} href={paths.docReactDafn}>
+              Documentação DAFN ({paths.docReactDafn})
+            </a>
+          </li>
+          <li>
             <a className={styles['login-link']} href="/rota-inexistente">
               Página não encontrada (404)
             </a>

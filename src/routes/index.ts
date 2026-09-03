@@ -1,2 +1,2 @@
 export { AppRoutes } from './AppRoutes'
-export { paths } from './paths'
+export { getDocComponentPath, paths } from './paths'

@@ -1,0 +1,112 @@
+.sidebar {
+  flex-shrink: 0;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cleanup-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--red-vivid-20);
+  background: var(--red-vivid-5);
+  color: var(--red-vivid-50-main);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-scale-down-02);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.cleanup-link:hover {
+  border-color: var(--red-vivid-50-main);
+}
+
+.cleanup-link.is-active {
+  background: var(--red-vivid-50-main);
+  border-color: var(--red-vivid-50-main);
+  color: var(--white);
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.group {
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+.group-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 4px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: var(--font-size-scale-down-02);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.group-label {
+  flex: 1;
+}
+
+.group-chevron {
+  flex-shrink: 0;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-link {
+  display: block;
+  padding: 8px 4px 8px 12px;
+  border-left: 2px solid transparent;
+  font-size: var(--font-size-scale-base);
+  color: var(--surface-text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.item-link:hover {
+  background: var(--surface-muted);
+}
+
+.is-active {
+  border-left-color: var(--blue-warm-vivid-70-main);
+  color: var(--blue-warm-vivid-70-main);
+  background: var(--surface-muted);
+  font-weight: var(--font-weight-bold);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+}
