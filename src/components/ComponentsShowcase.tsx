@@ -15,6 +15,7 @@ import { ModalExample } from './ModalExample'
 import { NavExample } from './NavExample'
 import { RadioExample } from './RadioExample'
 import { SearchExample } from './SearchExample'
+import { SkeletonExample } from './SkeletonExample'
 import { StepExample } from './StepExample'
 import { SwitchExample } from './SwitchExample'
 import { UploadExample } from './UploadExample'
@@ -39,6 +40,7 @@ const tabs = [
   { id: 'nav', label: 'Nav', Component: NavExample },
   { id: 'radio', label: 'Radio', Component: RadioExample },
   { id: 'search', label: 'Search', Component: SearchExample },
+  { id: 'skeleton', label: 'Skeleton', Component: SkeletonExample },
   { id: 'step', label: 'Step', Component: StepExample },
   { id: 'switch', label: 'Switch', Component: SwitchExample },
   { id: 'upload', label: 'Upload', Component: UploadExample }
