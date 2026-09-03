@@ -10,6 +10,7 @@ import { InputExample } from './InputExample'
 import { ListExample } from './ListExample'
 import { LoadingExample } from './LoadingExample'
 import { MenuPanelExample } from './MenuPanelExample'
+import { MessageExample } from './MessageExample'
 import { ModalExample } from './ModalExample'
 import { NavExample } from './NavExample'
 import { RadioExample } from './RadioExample'
@@ -31,6 +32,7 @@ const tabs = [
   { id: 'list', label: 'List', Component: ListExample },
   { id: 'loading', label: 'Loading', Component: LoadingExample },
   { id: 'menu-panel', label: 'MenuPanel', Component: MenuPanelExample },
+  { id: 'message', label: 'Message', Component: MessageExample },
   { id: 'modal', label: 'Modal', Component: ModalExample },
   { id: 'nav', label: 'Nav', Component: NavExample },
   { id: 'radio', label: 'Radio', Component: RadioExample },
