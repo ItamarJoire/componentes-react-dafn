@@ -17,13 +17,13 @@ export const Home = () => {
             </a>
           </li>
           <li>
-            <a className={styles['login-link']} href={paths.docReactDafn}>
-              Documentação DAFN ({paths.docReactDafn})
+            <a className={styles['login-link']} href="/rota-inexistente">
+              Página não encontrada (404)
             </a>
           </li>
           <li>
-            <a className={styles['login-link']} href="/rota-inexistente">
-              Página não encontrada (404)
+            <a className={styles['login-link']} style={{ color: 'red' }} href={paths.docReactDafn}>
+              Documentação DAFN ({paths.docReactDafn})
             </a>
           </li>
         </ul>
