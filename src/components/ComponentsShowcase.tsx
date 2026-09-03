@@ -7,6 +7,7 @@ import { CarouselExample } from './CarouselExample'
 import { CheckboxExample } from './CheckboxExample'
 import { DateTimePickerExample } from './DateTimePickerExample'
 import { InputExample } from './InputExample'
+import { ListExample } from './ListExample'
 import { LoadingExample } from './LoadingExample'
 import { MenuPanelExample } from './MenuPanelExample'
 import { ModalExample } from './ModalExample'
@@ -27,6 +28,7 @@ const tabs = [
   { id: 'checkbox', label: 'Checkbox', Component: CheckboxExample },
   { id: 'datetimepicker', label: 'DateTimePicker', Component: DateTimePickerExample },
   { id: 'input', label: 'Input', Component: InputExample },
+  { id: 'list', label: 'List', Component: ListExample },
   { id: 'loading', label: 'Loading', Component: LoadingExample },
   { id: 'menu-panel', label: 'MenuPanel', Component: MenuPanelExample },
   { id: 'modal', label: 'Modal', Component: ModalExample },

@@ -1,0 +1,104 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-item {
+  width: 100%;
+}
+
+.list-item-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--surface);
+  border: none;
+  text-align: left;
+  color: inherit;
+  font: inherit;
+  cursor: default;
+}
+
+.list-item-content.is-interactive {
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.list-item-content.is-interactive:hover {
+  background: var(--surface-muted);
+}
+
+.list-item-content.is-interactive:focus-visible {
+  outline: 2px solid var(--blue-warm-vivid-70-main);
+  outline-offset: -2px;
+}
+
+.list-item-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--surface-text);
+  font-size: 1.4rem;
+}
+
+.list-item-title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--font-size-scale-down-01);
+  color: var(--surface-text);
+  line-height: var(--font-line-height-low);
+}
+
+.list-item-meta {
+  flex-shrink: 0;
+  font-size: var(--font-size-scale-down-02);
+  color: var(--text-muted);
+}
+
+// Alta densidade: itens compactos, cada um com cantos arredondados e gap mínimo entre si
+.list-high {
+  gap: 2px;
+
+  .list-item-content {
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+}
+
+// Média densidade: gap intermediário entre itens arredondados
+.list-medium {
+  gap: 8px;
+
+  .list-item-content {
+    padding: 14px 16px;
+    border-radius: 8px;
+  }
+}
+
+// Baixa densidade: itens contínuos separados por divisor, contêiner único arredondado nas pontas
+.list-low {
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+
+  .list-item:not(:last-child) .list-item-content {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .list-item-content {
+    padding: 18px 16px;
+  }
+}
