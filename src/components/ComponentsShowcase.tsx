@@ -9,7 +9,9 @@ import { DateTimePickerExample } from './DateTimePickerExample'
 import { InputExample } from './InputExample'
 import { LoadingExample } from './LoadingExample'
 import { MenuPanelExample } from './MenuPanelExample'
+import { ModalExample } from './ModalExample'
 import { NavExample } from './NavExample'
+import { RadioExample } from './RadioExample'
 import { SearchExample } from './SearchExample'
 import { UploadExample } from './UploadExample'
 import { UsersTableExample } from './UserTableExample'
@@ -27,7 +29,9 @@ const tabs = [
   { id: 'input', label: 'Input', Component: InputExample },
   { id: 'loading', label: 'Loading', Component: LoadingExample },
   { id: 'menu-panel', label: 'MenuPanel', Component: MenuPanelExample },
+  { id: 'modal', label: 'Modal', Component: ModalExample },
   { id: 'nav', label: 'Nav', Component: NavExample },
+  { id: 'radio', label: 'Radio', Component: RadioExample },
   { id: 'search', label: 'Search', Component: SearchExample },
   { id: 'upload', label: 'Upload', Component: UploadExample }
 ]
