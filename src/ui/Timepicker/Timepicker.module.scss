@@ -1,0 +1,144 @@
+.timepicker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.timepicker-label {
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--surface-text);
+}
+
+.timepicker-required {
+  color: var(--red-vivid-50-main);
+}
+
+.timepicker-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0 14px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color var(--transition-fast);
+}
+
+.timepicker-wrapper:focus-within {
+  border-color: var(--blue-warm-vivid-70-main);
+  border-width: 2px;
+  padding: 0 13px;
+}
+
+.timepicker-wrapper input {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 0;
+  border: none;
+  background: transparent;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-scale-base);
+  color: var(--surface-text);
+  outline: none;
+}
+
+.timepicker-wrapper input::placeholder {
+  color: var(--gray-40);
+  font-style: italic;
+}
+
+.timepicker-wrapper input:disabled {
+  cursor: not-allowed;
+}
+
+.timepicker-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  padding: 4px;
+  color: var(--blue-warm-vivid-70-main);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.timepicker-action:disabled {
+  color: var(--gray-30);
+  cursor: not-allowed;
+}
+
+.timepicker-helper {
+  font-size: var(--font-size-scale-down-02);
+  color: var(--text-muted);
+}
+
+.timepicker-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 20;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 16px;
+}
+
+.time-panel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.time-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.time-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  padding: 4px;
+  color: var(--blue-warm-vivid-70-main);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.time-arrow:hover {
+  background: var(--surface-muted);
+}
+
+.time-input {
+  width: 48px;
+  padding: 8px 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  text-align: center;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-scale-base);
+  color: var(--surface-text);
+  background: var(--surface);
+  outline: none;
+}
+
+.time-input:focus {
+  border-color: var(--blue-warm-vivid-70-main);
+}
+
+.time-separator {
+  font-size: var(--font-size-scale-up-01);
+  font-weight: var(--font-weight-bold);
+  color: var(--surface-text);
+}

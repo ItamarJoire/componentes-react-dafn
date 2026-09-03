@@ -1,0 +1,211 @@
+.datepicker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.datepicker-label {
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--surface-text);
+}
+
+.datepicker-required {
+  color: var(--red-vivid-50-main);
+}
+
+.datepicker-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0 14px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color var(--transition-fast);
+}
+
+.datepicker-wrapper:focus-within {
+  border-color: var(--blue-warm-vivid-70-main);
+  border-width: 2px;
+  padding: 0 13px;
+}
+
+.datepicker-wrapper input {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 0;
+  border: none;
+  background: transparent;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-scale-base);
+  color: var(--surface-text);
+  outline: none;
+}
+
+.datepicker-wrapper input::placeholder {
+  color: var(--gray-40);
+  font-style: italic;
+}
+
+.datepicker-wrapper input:disabled {
+  cursor: not-allowed;
+}
+
+.datepicker-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  padding: 4px;
+  color: var(--blue-warm-vivid-70-main);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.datepicker-action:disabled {
+  color: var(--gray-30);
+  cursor: not-allowed;
+}
+
+.datepicker-helper {
+  font-size: var(--font-size-scale-down-02);
+  color: var(--text-muted);
+}
+
+.datepicker-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 20;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 16px;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 280px;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.calendar-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  padding: 6px;
+  color: var(--blue-warm-vivid-70-main);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.calendar-nav:hover {
+  background: var(--surface-muted);
+}
+
+.calendar-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+}
+
+.calendar-month-select {
+  border: none;
+  background: transparent;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-scale-down-01);
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-warm-vivid-70-main);
+  cursor: pointer;
+  outline: none;
+}
+
+.calendar-year-input {
+  width: 56px;
+  padding: 2px 6px;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-scale-down-02);
+  color: var(--surface-text);
+  background: var(--surface);
+  outline: none;
+  text-align: center;
+}
+
+.calendar-year-input:focus {
+  border-color: var(--blue-warm-vivid-70-main);
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: var(--font-size-scale-down-03);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-muted);
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.calendar-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-scale-down-02);
+  color: var(--surface-text);
+  cursor: pointer;
+}
+
+.calendar-day:hover:not(:disabled) {
+  background: var(--surface-muted);
+}
+
+.calendar-day:disabled {
+  color: var(--gray-20);
+  cursor: not-allowed;
+}
+
+.calendar-day.is-outside {
+  color: var(--gray-30);
+}
+
+.calendar-day.is-today {
+  font-weight: var(--font-weight-bold);
+  color: var(--blue-warm-vivid-70-main);
+}
+
+.calendar-day.is-selected {
+  background: var(--blue-warm-vivid-70-main);
+  color: var(--white);
+  font-weight: var(--font-weight-bold);
+}

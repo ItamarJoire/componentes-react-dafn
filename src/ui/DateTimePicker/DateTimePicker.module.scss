@@ -1,0 +1,100 @@
+.datetimepicker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.datetimepicker-label {
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--surface-text);
+}
+
+.datetimepicker-required {
+  color: var(--red-vivid-50-main);
+}
+
+.datetimepicker-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0 14px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color var(--transition-fast);
+}
+
+.datetimepicker-wrapper:focus-within {
+  border-color: var(--blue-warm-vivid-70-main);
+  border-width: 2px;
+  padding: 0 13px;
+}
+
+.datetimepicker-wrapper input {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 0;
+  border: none;
+  background: transparent;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-scale-base);
+  color: var(--surface-text);
+  outline: none;
+}
+
+.datetimepicker-wrapper input::placeholder {
+  color: var(--gray-40);
+  font-style: italic;
+}
+
+.datetimepicker-wrapper input:disabled {
+  cursor: not-allowed;
+}
+
+.datetimepicker-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  padding: 4px;
+  color: var(--blue-warm-vivid-70-main);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.datetimepicker-action:disabled {
+  color: var(--gray-30);
+  cursor: not-allowed;
+}
+
+.datetimepicker-helper {
+  font-size: var(--font-size-scale-down-02);
+  color: var(--text-muted);
+}
+
+.datetimepicker-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 16px;
+}
+
+.datetimepicker-divider {
+  height: 1px;
+  background: var(--border);
+}

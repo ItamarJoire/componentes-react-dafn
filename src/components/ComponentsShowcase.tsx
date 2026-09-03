@@ -3,6 +3,7 @@ import { AccordionExample } from './AccordionExample'
 import { BadgeExample } from './BadgeExample'
 import { ButtonExample } from './ButtonExample'
 import { CarouselExample } from './CarouselExample'
+import { DateTimePickerExample } from './DateTimePickerExample'
 import { InputExample } from './InputExample'
 import { MenuPanelExample } from './MenuPanelExample'
 import { NavExample } from './NavExample'
@@ -17,6 +18,7 @@ const tabs = [
   { id: 'badge', label: 'Badge', Component: BadgeExample },
   { id: 'button', label: 'Button', Component: ButtonExample },
   { id: 'carousel', label: 'Carousel', Component: CarouselExample },
+  { id: 'datetimepicker', label: 'DateTimePicker', Component: DateTimePickerExample },
   { id: 'input', label: 'Input', Component: InputExample },
   { id: 'menu-panel', label: 'MenuPanel', Component: MenuPanelExample },
   { id: 'nav', label: 'Nav', Component: NavExample },
