@@ -25,12 +25,6 @@ Rode o script abaixo na raiz do projeto:
 node scripts/remove-doc-react-dafn.mjs
 ```
 
-Ele apaga `src/pages/DocReactDafn` e `scripts/generate-docs-manifest.mjs`, reverte os pontos onde a rota foi ligada ao projeto (`src/routes/paths.ts`, `src/routes/index.ts`, `src/routes/AppRoutes.tsx`, `src/pages/index.ts` e `src/pages/Home/Home.tsx`), remove os scripts `predev`/`prebuild` e a dependência `react-docgen-typescript` do `package.json`, e limpa a entrada correspondente do `.gitignore`.
+Ele apaga `src/pages/DocReactDafn`, reverte os pontos onde a rota foi ligada ao projeto (`src/routes/paths.ts`, `src/routes/index.ts`, `src/routes/AppRoutes.tsx`, `src/pages/index.ts` e `src/pages/Home/Home.tsx`), remove os scripts `predev`/`prebuild` e a dependência `react-docgen-typescript` do `package.json`, limpa a entrada correspondente do `.gitignore` e, por fim, apaga a própria pasta `scripts` (incluindo este script).
 
-O script pede confirmação antes de alterar qualquer coisa. Para pular a confirmação, use a flag `--yes`:
-
-```bash
-node scripts/remove-doc-react-dafn.mjs --yes
-```
-
-Depois de rodar, revise o diff (`git diff`) antes de commitar.
+O script sempre pede confirmação antes de alterar qualquer coisa.

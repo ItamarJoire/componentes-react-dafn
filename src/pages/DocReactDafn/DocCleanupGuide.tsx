@@ -19,25 +19,15 @@ export const DocCleanupGuide = () => (
 
     <p>
       Rode o script abaixo na raiz do projeto. Ele apaga os arquivos da documentação, reverte os pontos onde a rota
-      foi ligada ao projeto (rotas, páginas, <code>package.json</code> e <code>.gitignore</code>) e remove a
-      dependência <code>react-docgen-typescript</code>.
+      foi ligada ao projeto (rotas, páginas, <code>package.json</code> e <code>.gitignore</code>), remove a
+      dependência <code>react-docgen-typescript</code> e, por fim, apaga a própria pasta <code>scripts</code>{' '}
+      (incluindo este script).
     </p>
 
     <pre className={styles['codeBlock']}>
       <code>node scripts/remove-doc-react-dafn.mjs</code>
     </pre>
 
-    <p>
-      O script pede confirmação antes de alterar qualquer coisa. Para pular a confirmação, use a flag{' '}
-      <code>--yes</code>:
-    </p>
-
-    <pre className={styles['codeBlock']}>
-      <code>node scripts/remove-doc-react-dafn.mjs --yes</code>
-    </pre>
-
-    <p>
-      Depois de rodar, revise o diff (<code>git diff</code>) antes de commitar.
-    </p>
+    <p>O script sempre pede confirmação antes de alterar qualquer coisa.</p>
   </div>
 )

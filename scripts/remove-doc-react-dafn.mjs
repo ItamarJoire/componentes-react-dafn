@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Remove a rota /doc-react-dafn e todas as suas dependências do projeto.
-// Uso: node scripts/remove-doc-react-dafn.mjs [--yes]
+// Uso: node scripts/remove-doc-react-dafn.mjs
 
 import { existsSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
@@ -11,8 +11,6 @@ import { createInterface } from 'node:readline/promises'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
 const p = (...segments) => resolve(root, ...segments)
-
-const skipConfirm = process.argv.includes('--yes') || process.argv.includes('-y')
 
 function editFile(path, transform) {
   if (!existsSync(path)) {
@@ -44,7 +42,6 @@ function removeFiles(paths) {
 }
 
 async function confirm() {
-  if (skipConfirm) return true
   const rl = createInterface({ input: process.stdin, output: process.stdout })
   const answer = await rl.question(
     'Isso vai remover a rota /doc-react-dafn e todas as suas dependências do projeto. Continuar? (s/N) '
@@ -61,8 +58,8 @@ async function main() {
     process.exit(0)
   }
 
-  console.log('\n1. Apagando arquivos e pastas')
-  removeFiles([p('src/pages/DocReactDafn'), p('scripts/generate-docs-manifest.mjs')])
+  console.log('\n1. Apagando a pasta da documentação')
+  removeFiles([p('src/pages/DocReactDafn')])
 
   console.log('\n2. Revertendo os pontos onde a rota foi ligada ao projeto')
 
@@ -98,7 +95,7 @@ async function main() {
     )
   )
 
-  console.log('\n3. Removendo o script de geração e a dependência')
+  console.log('\n3. Removendo a dependência de geração da documentação')
 
   editFile(p('package.json'), src => {
     const pkg = JSON.parse(src)
@@ -121,7 +118,10 @@ async function main() {
     }
   }
 
-  console.log('\nConcluído. Revise o diff (git diff) antes de commitar.')
+  console.log('\n4. Apagando a pasta scripts (inclui este próprio script)')
+  removeFiles([p('scripts')])
+
+  console.log('\nConcluído.')
 }
 
 main()
