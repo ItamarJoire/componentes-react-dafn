@@ -19,30 +19,18 @@ Depois disso, o novo diretório é um projeto independente: você pode inicializ
 
 Toda cópia gerada a partir deste template vem com a rota `/doc-react-dafn`, usada só para consulta durante o desenvolvimento. Ela **deve ser removida antes de subir para produção**.
 
-### 1. Apagar arquivos e pastas
+Rode o script abaixo na raiz do projeto:
 
 ```bash
-rm -rf src/pages/DocReactDafn
-rm scripts/generate-docs-manifest.mjs
+node scripts/remove-doc-react-dafn.mjs
 ```
 
-No PowerShell:
+Ele apaga `src/pages/DocReactDafn` e `scripts/generate-docs-manifest.mjs`, reverte os pontos onde a rota foi ligada ao projeto (`src/routes/paths.ts`, `src/routes/index.ts`, `src/routes/AppRoutes.tsx`, `src/pages/index.ts` e `src/pages/Home/Home.tsx`), remove os scripts `predev`/`prebuild` e a dependência `react-docgen-typescript` do `package.json`, e limpa a entrada correspondente do `.gitignore`.
 
-```powershell
-Remove-Item -Recurse -Force src/pages/DocReactDafn
-Remove-Item scripts/generate-docs-manifest.mjs
+O script pede confirmação antes de alterar qualquer coisa. Para pular a confirmação, use a flag `--yes`:
+
+```bash
+node scripts/remove-doc-react-dafn.mjs --yes
 ```
 
-### 2. Reverter os pontos onde a rota foi ligada ao projeto
-
-- `src/routes/paths.ts` — remova `docReactDafn`, `docReactDafnCleanup` e a função `getDocComponentPath`.
-- `src/routes/index.ts` — remova a exportação de `getDocComponentPath`.
-- `src/routes/AppRoutes.tsx` — remova o bloco `<Route path={paths.docReactDafn}>...</Route>` e os imports de `DocReactDafn`, `DocOverview`, `DocComponentDetail` e `DocCleanupGuide`.
-- `src/pages/index.ts` — remova a linha que exporta a partir de `./DocReactDafn`.
-- `src/pages/Home/Home.tsx` — remova o item de lista com o link para `paths.docReactDafn`.
-
-### 3. Remover o script de geração e a dependência
-
-- `package.json` — remova os scripts `predev` e `prebuild`.
-- Rode `npm uninstall react-docgen-typescript`.
-- `.gitignore` — remova a linha de `src/pages/DocReactDafn/manifest.generated.ts`.
+Depois de rodar, revise o diff (`git diff`) antes de commitar.

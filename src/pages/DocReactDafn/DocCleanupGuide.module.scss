@@ -29,3 +29,18 @@
   border-radius: 4px;
   font-size: 0.9em;
 }
+
+.codeBlock {
+  max-width: 760px;
+  margin: 8px 0;
+  padding: 14px 18px;
+  overflow-x: auto;
+  background: var(--gray-90);
+  border-radius: 8px;
+}
+
+.codeBlock code {
+  background: none;
+  padding: 0;
+  color: var(--gray-5);
+}

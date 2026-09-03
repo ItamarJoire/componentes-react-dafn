@@ -3,8 +3,6 @@ import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons'
 import { PageTitle } from '../../ui'
 import styles from './DocCleanupGuide.module.scss'
 
-const TEMPLATE_REPO_URL = 'https://git.iti.gov.br/itamar.nascimento/componentes-react-dafn'
-
 export const DocCleanupGuide = () => (
   <div className={styles['guide']}>
     <PageTitle title="Remover rota de documentação" />
@@ -20,10 +18,26 @@ export const DocCleanupGuide = () => (
     </div>
 
     <p>
-      O passo a passo para remover está no README do repositório template:{' '}
-      <a href={TEMPLATE_REPO_URL} target="_blank" rel="noopener noreferrer">
-        {TEMPLATE_REPO_URL}
-      </a>
+      Rode o script abaixo na raiz do projeto. Ele apaga os arquivos da documentação, reverte os pontos onde a rota
+      foi ligada ao projeto (rotas, páginas, <code>package.json</code> e <code>.gitignore</code>) e remove a
+      dependência <code>react-docgen-typescript</code>.
+    </p>
+
+    <pre className={styles['codeBlock']}>
+      <code>node scripts/remove-doc-react-dafn.mjs</code>
+    </pre>
+
+    <p>
+      O script pede confirmação antes de alterar qualquer coisa. Para pular a confirmação, use a flag{' '}
+      <code>--yes</code>:
+    </p>
+
+    <pre className={styles['codeBlock']}>
+      <code>node scripts/remove-doc-react-dafn.mjs --yes</code>
+    </pre>
+
+    <p>
+      Depois de rodar, revise o diff (<code>git diff</code>) antes de commitar.
     </p>
   </div>
 )
