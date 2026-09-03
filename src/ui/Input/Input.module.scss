@@ -16,6 +16,7 @@
 }
 
 .input-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -57,7 +58,15 @@
 
 .input-wrapper select {
   appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 28px;
   cursor: pointer;
+}
+
+.input-wrapper select option {
+  background: var(--surface);
+  color: var(--surface-text);
 }
 
 .input-wrapper input::placeholder,
@@ -99,10 +108,13 @@
 }
 
 .input-caret {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   color: var(--text-muted);
   pointer-events: none;
 }

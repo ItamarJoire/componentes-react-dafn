@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light;
+
   --bg: #fff;
   --surface: var(--white);
   --surface-text: var(--gray-90);
@@ -11,7 +13,9 @@
   // Textos
   --white: #fff;
   --gray-90: #1b1b1b;
+  --gray-85: #272727;
   --gray-80-main: #333;
+  --gray-75: #3a3a3a;
   --gray-70: #555;
   --gray-60: #636363;
   --gray-50: #757575;
@@ -119,14 +123,16 @@
 }
 
 :root[data-theme='dark'] {
+  color-scheme: dark;
+
   --bg: var(--gray-90);
   --surface: var(--bg);
   --surface-text: var(--gray-5);
-  --surface-muted: #262626;
+  --surface-muted: var(--gray-85);
   --text-muted: var(--gray-30);
-  --border: #3a3a3a;
-  --border-strong: #545454;
-  --footer-surface: var(--gray-90);
+  --border: var(--gray-75);
+  --border-strong: var(--gray-70);
+  --footer-surface: var(--gray-85);
   color: var(--gray-5);
   background: var(--bg);
 }

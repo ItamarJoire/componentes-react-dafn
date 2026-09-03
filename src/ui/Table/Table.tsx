@@ -109,9 +109,11 @@ export const Table = <T,>({
               <FontAwesomeIcon icon={showCheckboxes ? faSquareCheck : faSquare} style={{ width: 18, height: 18 }} />
             </button>
           )}
-          <button type="button" className={styles['icon-btn']} aria-label="Mais opções" onClick={onMoreOptions}>
-            <FontAwesomeIcon icon={faEllipsisVertical} style={{ width: 18, height: 18 }} />
-          </button>
+          {onMoreOptions && (
+            <button type="button" className={styles['icon-btn']} aria-label="Mais opções" onClick={onMoreOptions}>
+              <FontAwesomeIcon icon={faEllipsisVertical} style={{ width: 18, height: 18 }} />
+            </button>
+          )}
         </div>
       </div>
 

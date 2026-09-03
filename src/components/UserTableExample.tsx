@@ -1,4 +1,6 @@
 import { useMemo, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye, faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { Table } from '../ui/Table'
 
 interface User {
@@ -40,13 +42,29 @@ export const UsersTableExample = () => {
     <Table
       title="Usuários"
       columns={[
-        { key: 'name', label: 'name' },
+        { key: 'name', label: 'Nome' },
         { key: 'email', label: 'E-mail' },
-        { key: 'profile', label: 'profile', align: 'center' }
+        { key: 'profile', label: 'Perfil', align: 'center' }
       ]}
       data={paginaAtual}
       getRowId={row => row.id}
-      selectable
+      rowActions={[
+        {
+          label: 'Visualizar',
+          icon: <FontAwesomeIcon icon={faEye} style={{ width: 16, height: 16 }} />,
+          onClick: row => console.log('Visualizar', row)
+        },
+        {
+          label: 'Editar',
+          icon: <FontAwesomeIcon icon={faPenToSquare} style={{ width: 16, height: 16 }} />,
+          onClick: row => console.log('Editar', row)
+        },
+        {
+          label: 'Excluir',
+          icon: <FontAwesomeIcon icon={faTrash} style={{ width: 16, height: 16 }} />,
+          onClick: row => console.log('Excluir', row)
+        }
+      ]}
       onSearch={query => {
         setSearch(query)
         setPage(1)

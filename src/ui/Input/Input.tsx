@@ -1,4 +1,4 @@
-import React, { useId, useState } from 'react'
+import React, { useEffect, useId, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faEye,
@@ -55,6 +55,20 @@ export const Input: React.FC<InputProps> = ({
   const generatedId = useId()
   const inputId = id ?? generatedId
   const [showPassword, setShowPassword] = useState(false)
+  const selectRef = useRef<HTMLSelectElement>(null)
+  const [selectWidth, setSelectWidth] = useState<number>()
+
+  useEffect(() => {
+    if (type !== 'dropdown' || !selectRef.current) return
+
+    const el = selectRef.current
+    const updateWidth = () => setSelectWidth(el.offsetWidth)
+    updateWidth()
+
+    const observer = new ResizeObserver(updateWidth)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [type])
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     if (type === 'tel') {
@@ -101,12 +115,14 @@ export const Input: React.FC<InputProps> = ({
           />
         ) : type === 'dropdown' ? (
           <select
+            ref={selectRef}
             id={inputId}
             name={name}
             value={value}
             onChange={handleChange}
             disabled={disabled}
             required={required}
+            style={selectWidth ? { width: selectWidth } : undefined}
           >
             <option value="" disabled hidden>
               {placeholder ?? 'Selecione'}
@@ -153,7 +169,7 @@ export const Input: React.FC<InputProps> = ({
 
       {message ? (
         <p className={`${styles['input-message']} ${styles[`input-message-${status}`]}`}>
-          {currentStatusIcon && <FontAwesomeIcon icon={currentStatusIcon} style={{ width: 16, height: 16 }}/>}
+          {currentStatusIcon && <FontAwesomeIcon icon={currentStatusIcon} style={{ width: 16, height: 16 }} />}
           {message}
         </p>
       ) : (

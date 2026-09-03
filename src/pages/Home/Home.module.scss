@@ -1,28 +1,22 @@
-.home {
-  background: var(--blue-warm-vivid-90);
-  --surface-text: var(--white);
-  color: var(--white);
+.routes {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 24px;
 }
 
-.hero {
+.routes-title {
+  font-weight: 700;
+  color: var(--surface-text);
+  margin: 0 0 12px;
+}
+
+.routes-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 16px;
-  padding: 120px 0;
-}
-
-.hero-text {
-  margin-top: -24px;
-  color: var(--gray-30);
-}
-
-.actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 16px;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .login-link {
@@ -31,20 +25,10 @@
   text-decoration: underline;
 }
 
-.routes {
-  margin-top: 24px;
-}
-
-.routes-title {
-  font-weight: 700;
-  color: var(--white);
-}
-
-.routes-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  list-style: none;
-  padding: 0;
+.examples {
+  background: var(--surface);
+  color: var(--surface-text);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 24px 80px;
 }
