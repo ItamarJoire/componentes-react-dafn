@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Button } from '../ui/Button'
-import { Modal } from '../ui/Modal'
-import { RadioGroup } from '../ui/Radio'
+import { Button } from '../../ui/Button'
+import { Modal } from '../../ui/Modal'
+import { RadioGroup } from '../../ui/Radio'
 import styles from './ModalExample.module.scss'
 
 const radioOptions = [

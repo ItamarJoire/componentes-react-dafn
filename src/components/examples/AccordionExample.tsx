@@ -1,4 +1,4 @@
-import { Accordion } from '../ui/Accordion'
+import { Accordion } from '../../ui/Accordion'
 
 export const AccordionExample = () => {
   return (

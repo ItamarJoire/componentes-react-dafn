@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MenuPanel, defaultMenuSections } from '../ui/MenuPanel'
+import { MenuPanel, defaultMenuSections } from '../../ui/MenuPanel'
 
 export const MenuPanelExample = () => {
   const [openSectionIds, setOpenSectionIds] = useState<string[]>([])

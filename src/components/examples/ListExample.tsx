@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
-import { List } from '../ui/List'
-import type { ListItem } from '../ui/List'
+import { List } from '../../ui/List'
+import type { ListItem } from '../../ui/List'
 import styles from './ListExample.module.scss'
 
 const items: ListItem[] = [

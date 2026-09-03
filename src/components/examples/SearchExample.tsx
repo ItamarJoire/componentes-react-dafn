@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Search } from '../ui/Search'
+import { Search } from '../../ui/Search'
 
 export const SearchExample = () => {
   const [ultimaBusca, setUltimaBusca] = useState('')

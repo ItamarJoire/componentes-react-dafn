@@ -1,4 +1,4 @@
-import { Upload } from '../ui/Upload'
+import { Upload } from '../../ui/Upload'
 
 export const UploadExample = () => {
   return (

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUser, faHeart, faImage, faShareNodes } from '@fortawesome/free-solid-svg-icons'
-import { Button } from '../ui/Button'
-import { Card } from '../ui/Card'
+import { Button } from '../../ui/Button'
+import { Card } from '../../ui/Card'
 import styles from './CardExample.module.scss'
 
 const shortText = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod'

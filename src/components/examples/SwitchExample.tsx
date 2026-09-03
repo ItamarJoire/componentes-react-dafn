@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Switch } from '../ui/Switch'
+import { Switch } from '../../ui/Switch'
 
 export const SwitchExample = () => {
   const [enabled, setEnabled] = useState(false)

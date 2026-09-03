@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Input } from '../ui/Input'
+import { Input } from '../../ui/Input'
 
 export const InputExample = () => {
   const [nome, setNome] = useState('')

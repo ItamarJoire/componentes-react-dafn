@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { Datepicker } from '../ui/Datepicker'
-import { Timepicker } from '../ui/Timepicker'
-import type { TimeValue } from '../ui/Timepicker'
-import { DateTimePicker } from '../ui/DateTimePicker'
+import { Datepicker } from '../../ui/Datepicker'
+import { Timepicker } from '../../ui/Timepicker'
+import type { TimeValue } from '../../ui/Timepicker'
+import { DateTimePicker } from '../../ui/DateTimePicker'
 import styles from './DateTimePickerExample.module.scss'
 
 export const DateTimePickerExample = () => {

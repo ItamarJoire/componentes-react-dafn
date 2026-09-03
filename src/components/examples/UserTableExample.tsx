@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons'
-import { Table } from '../ui/Table'
+import { Table } from '../../ui/Table'
 
 interface User {
   id: string

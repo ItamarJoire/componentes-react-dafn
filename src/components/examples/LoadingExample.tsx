@@ -1,4 +1,4 @@
-import { Loading } from '../ui/Loading'
+import { Loading } from '../../ui/Loading'
 import styles from './LoadingExample.module.scss'
 
 export const LoadingExample = () => {

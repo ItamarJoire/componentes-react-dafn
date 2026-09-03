@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Message } from '../ui/Message'
-import type { MessageVariant } from '../ui/Message'
+import { Message } from '../../ui/Message'
+import type { MessageVariant } from '../../ui/Message'
 import styles from './MessageExample.module.scss'
 
 const messages: { variant: MessageVariant; text: string }[] = [

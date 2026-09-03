@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react'
-import { Carousel } from '../ui/Carousel'
+import { Carousel } from '../../ui/Carousel'
 
 const bannerStyle = (background: string): CSSProperties => ({
   display: 'flex',

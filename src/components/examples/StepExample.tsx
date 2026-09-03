@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Step } from '../ui/Step'
-import type { StepItem } from '../ui/Step'
+import { Step } from '../../ui/Step'
+import type { StepItem } from '../../ui/Step'
 import styles from './StepExample.module.scss'
 
 const steps: StepItem[] = [

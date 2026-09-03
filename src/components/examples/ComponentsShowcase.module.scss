@@ -10,7 +10,6 @@
   flex-wrap: nowrap;
   gap: 24px;
   overflow-x: auto;
-  border-bottom: 1px solid var(--border);
 }
 
 .tab {
@@ -27,7 +26,9 @@
   color: var(--text-muted);
   border-bottom: 2px solid transparent;
   white-space: nowrap;
-  transition: color var(--transition-fast), border-color var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
 
   &:hover {
     color: var(--surface-text);
@@ -47,7 +48,7 @@
 
 .panel {
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 4px;
   min-height: 260px;
   padding: 48px 24px;
   display: flex;
