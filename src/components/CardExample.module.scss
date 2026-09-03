@@ -1,0 +1,25 @@
+.card-example {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.card-example-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 280px;
+}
+
+.card-example-fixed-height {
+  height: 420px;
+}
+
+.card-footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--blue-warm-vivid-70-main);
+  font-size: 1.6rem;
+}

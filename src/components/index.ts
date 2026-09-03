@@ -1,6 +1,7 @@
 export { AccordionExample } from './AccordionExample'
 export { BadgeExample } from './BadgeExample'
 export { ButtonExample } from './ButtonExample'
+export { CardExample } from './CardExample'
 export { CarouselExample } from './CarouselExample'
 export { ComponentsShowcase } from './ComponentsShowcase'
 export { DateTimePickerExample } from './DateTimePickerExample'

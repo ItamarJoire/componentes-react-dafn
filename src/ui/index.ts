@@ -1,6 +1,7 @@
 export { Accordion } from './Accordion'
 export { Badge } from './Badge'
 export { Button } from './Button'
+export { Card } from './Card'
 export { Carousel } from './Carousel'
 export { Input } from './Input'
 export { MenuPanel, defaultMenuSections } from './MenuPanel'

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { AccordionExample } from './AccordionExample'
 import { BadgeExample } from './BadgeExample'
 import { ButtonExample } from './ButtonExample'
+import { CardExample } from './CardExample'
 import { CarouselExample } from './CarouselExample'
 import { CheckboxExample } from './CheckboxExample'
 import { DateTimePickerExample } from './DateTimePickerExample'
@@ -18,6 +19,7 @@ const tabs = [
   { id: 'accordion', label: 'Accordion', Component: AccordionExample },
   { id: 'badge', label: 'Badge', Component: BadgeExample },
   { id: 'button', label: 'Button', Component: ButtonExample },
+  { id: 'card', label: 'Card', Component: CardExample },
   { id: 'carousel', label: 'Carousel', Component: CarouselExample },
   { id: 'checkbox', label: 'Checkbox', Component: CheckboxExample },
   { id: 'datetimepicker', label: 'DateTimePicker', Component: DateTimePickerExample },
