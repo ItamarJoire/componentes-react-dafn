@@ -1,0 +1,109 @@
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.checkbox.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.checkbox-input-wrapper {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox-input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-input:disabled {
+  cursor: not-allowed;
+}
+
+.checkbox-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-strong);
+  border-radius: 2px;
+  background: var(--surface);
+  box-sizing: border-box;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+  pointer-events: none;
+}
+
+.checkbox-box.is-checked {
+  background: var(--blue-warm-vivid-70-main);
+  border-color: var(--blue-warm-vivid-70-main);
+}
+
+.checkbox-icon {
+  width: 12px;
+  height: 12px;
+  color: var(--white);
+}
+
+.checkbox-input:focus-visible ~ .checkbox-box {
+  outline: 2px solid var(--blue-warm-vivid-70-main);
+  outline-offset: 2px;
+}
+
+.checkbox-label {
+  font-size: var(--font-size-scale-base);
+  color: var(--surface-text);
+  line-height: var(--font-line-height-low);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.checkbox-group-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.checkbox-group-label {
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--surface-text);
+}
+
+.checkbox-group-description {
+  font-size: var(--font-size-scale-down-02);
+  color: var(--text-muted);
+}
+
+.checkbox-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkbox-group-select-all {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.checkbox-group-select-all .checkbox-label {
+  font-weight: var(--font-weight-bold);
+}
