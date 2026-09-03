@@ -90,7 +90,7 @@ async function main() {
 
   editFile(p('src/pages/Home/Home.tsx'), src =>
     src.replace(
-      /\s*<li>\s*<a className=\{styles\['login-link'\]\} href=\{paths\.docReactDafn\}>\s*Documentação DAFN \(\{paths\.docReactDafn\}\)\s*<\/a>\s*<\/li>/,
+      /\s*<li>\s*<a className=\{styles\['login-link'\]\}[^>]*href=\{paths\.docReactDafn\}>\s*Documentação DAFN \(\{paths\.docReactDafn\}\)\s*<\/a>\s*<\/li>/,
       ''
     )
   )

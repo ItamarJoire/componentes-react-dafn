@@ -31,6 +31,10 @@
 }
 
 .codeBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   max-width: 760px;
   margin: 8px 0;
   padding: 14px 18px;
@@ -44,4 +48,23 @@
   padding: 0;
   color: var(--gray-5);
   font-size: var(--font-size-scale-base);
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  color: var(--gray-5);
+  background: none;
+  border: 1px solid var(--gray-70);
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--gray-80);
+  }
 }
