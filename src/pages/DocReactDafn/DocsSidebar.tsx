@@ -29,7 +29,7 @@ export const DocsSidebar = () => {
         className={({ isActive }) => `${styles['cleanup-link']}${isActive ? ` ${styles['is-active']}` : ''}`}
       >
         <FontAwesomeIcon icon={faTriangleExclamation} style={{ width: 14, height: 14 }} />
-        Como remover
+        Remover rota de documentação
       </NavLink>
 
       <ul className={styles['groups']}>
