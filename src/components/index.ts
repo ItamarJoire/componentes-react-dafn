@@ -1,6 +1,7 @@
 export { AccordionExample } from './AccordionExample'
 export { BadgeExample } from './BadgeExample'
 export { ButtonExample } from './ButtonExample'
+export { CarouselExample } from './CarouselExample'
 export { ComponentsShowcase } from './ComponentsShowcase'
 export { FooterExample } from './FooterExample'
 export { HeaderExample } from './HeaderExample'

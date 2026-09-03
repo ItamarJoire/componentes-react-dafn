@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { AccordionExample } from './AccordionExample'
 import { BadgeExample } from './BadgeExample'
 import { ButtonExample } from './ButtonExample'
+import { CarouselExample } from './CarouselExample'
 import { InputExample } from './InputExample'
 import { MenuPanelExample } from './MenuPanelExample'
 import { NavExample } from './NavExample'
@@ -15,6 +16,7 @@ const tabs = [
   { id: 'accordion', label: 'Accordion', Component: AccordionExample },
   { id: 'badge', label: 'Badge', Component: BadgeExample },
   { id: 'button', label: 'Button', Component: ButtonExample },
+  { id: 'carousel', label: 'Carousel', Component: CarouselExample },
   { id: 'input', label: 'Input', Component: InputExample },
   { id: 'menu-panel', label: 'MenuPanel', Component: MenuPanelExample },
   { id: 'nav', label: 'Nav', Component: NavExample },
