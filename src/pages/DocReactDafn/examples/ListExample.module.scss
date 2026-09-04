@@ -1,0 +1,23 @@
+.list-example {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.list-example-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 280px;
+  padding: 12px;
+  background: var(--surface-muted);
+  border-radius: 8px;
+}
+
+.list-example-label {
+  margin: 0;
+  font-size: var(--font-size-scale-down-02);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-muted);
+}

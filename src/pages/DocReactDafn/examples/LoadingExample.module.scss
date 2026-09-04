@@ -1,0 +1,13 @@
+.loading-example {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 48px;
+}
+
+.loading-example-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
